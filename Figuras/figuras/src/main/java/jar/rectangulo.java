@@ -6,8 +6,9 @@ public class rectangulo{
     private double altura = 0d;
 
     public rectangulo(){
-
+        super();
     }
+
 
     public rectangulo(double base, double altura){
         this.base = base;
@@ -18,8 +19,21 @@ public class rectangulo{
         return this.altura;
     }
 
-    public void setAltura(){
+    public void setAltura(double altura){
         this.altura = altura;
     }
+
+    public double getBase(){
+        return this.base;
+    }
+
+    public void setBase(double base){
+        this.base = base;
+    }
+
+    public double area(){
+        return getBase() * getAltura();
+    }
+    
     
 }

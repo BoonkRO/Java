@@ -10,11 +10,8 @@ public class testCirculo extends TestCase{
 
     @Test
     public void testRadio(){
-        assertEquals(Math.PI*(2*2), pruebaRadio);
+        assertEquals(Math.PI*(4), pruebaRadio);
     }
 
-    @Test
-    public void testasasas(){
-        assertEquals(1, 1);
-    }
+
 }
