@@ -6,9 +6,8 @@ public class rectangulo{
     private double altura = 0d;
 
     public rectangulo(){
-        super();
+        
     }
-
 
     public rectangulo(double base, double altura){
         this.base = base;
