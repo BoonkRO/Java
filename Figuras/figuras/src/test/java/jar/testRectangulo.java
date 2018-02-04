@@ -9,8 +9,8 @@ public class testRectangulo extends TestCase{
     
     @Test
     public void testArea(){
-        rectangulo saberAltura = new rectangulo(5, 4);
-        assertEquals(20, saberAltura.area());
+        rectangulo saberArea = new rectangulo(5, 4);
+        assertEquals(20.0, saberArea.area());
     }
 
 }

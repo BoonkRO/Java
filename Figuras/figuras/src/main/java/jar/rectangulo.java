@@ -1,15 +1,23 @@
 package jar;
 
-public class rectangulo{
+public class rectangulo extends figuraGeometrica{
 
     private double base = 0d;
     private double altura = 0d;
 
     public rectangulo(){
+        super();
         
     }
 
     public rectangulo(double base, double altura){
+        super();
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public rectangulo(String nombre, double base, double altura){
+        super(nombre);
         this.base = base;
         this.altura = altura;
     }
@@ -23,7 +31,7 @@ public class rectangulo{
     }
 
     public double getBase(){
-        return this.base;
+        return this.base;  
     }
 
     public void setBase(double base){

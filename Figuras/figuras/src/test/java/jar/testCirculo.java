@@ -6,11 +6,12 @@ import org.junit.Test;
 
 public class testCirculo extends TestCase{
 
-    circulo pruebaRadio = new circulo(Math.PI*(2*2));
+    circulo pruebaRadio = new circulo(2);
+    circulo pruebaArea = new circulo("circulo", 2);
 
     @Test
-    public void testRadio(){
-        assertEquals(Math.PI*(4), pruebaRadio);
+    public void testArea(){
+        assertEquals(Math.PI * 4, pruebaArea.area());
     }
 
 

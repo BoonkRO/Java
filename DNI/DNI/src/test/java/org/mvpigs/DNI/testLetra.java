@@ -1,17 +1,15 @@
-package test.java.org.mvpigs.DNI;
+package org.mvpigs.DNI;
 
 import junit.framework.TestCase;
-import main.java.org.mvpigs.DNI.letraDNI;
+import org.junit.Test;
 
 
-public class testLetraDNI extends TestCase{
+public class testLetra extends TestCase {
 
     @Test
-    public void testLetra() {
-        letrasDNI nuevoDNI = new letrasDNI("47455398");
-        assertEquals('G', nuevoDNI.getLetra());
+    public void testLetra1() {
 
+        letraDNI hhh = new letraDNI("47455398");
+        assertEquals('G', hhh.getLetra());
     }
-
-
 }

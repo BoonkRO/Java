@@ -1,19 +1,25 @@
 package jar;
 
-public class circulo{
-
-    private double radio;
-    private final double numeroPi = Math.PI;
+public class circulo extends figuraGeometrica {
     
-
+    private double radio;
 
     public circulo(){
-        this.radio = 0d;
+        super();
     }
 
-    public circulo(double radio){
+    public circulo(double radio) {
+        super();
+        this.radio = 0;
+    }
+
+    public circulo(String nombre, double radio) {
+        super(nombre);
         this.radio = radio;
     }
 
+    public double area() {
+        return Math.PI * (this.radio * this.radio);
+    }
 
 }
