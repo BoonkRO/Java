@@ -1,9 +1,9 @@
+package jar;
 
-public class Estacion(){
+public class Estacion{
     private int id = 0;
     private String direccion = null;
     private int numeroAnclajes = 0;
-    private Bicicletas[] anclajes = null;
 
     /* Constructores */
     public Estacion(int id, String direccion, int anclajes){
@@ -12,6 +12,7 @@ public class Estacion(){
         this.numeroAnclajes = anclajes;
     }
 
+    /* Encapsulacion */
     public int getId(){
         return id;
     }
@@ -24,8 +25,16 @@ public class Estacion(){
         return numeroAnclajes;
     }
 
-    
+    /* Logica */
+    public void consultarEstacion() {
+        System.out.println("id:" + getId());
+        System.out.println("direccion:" + getDireccion());
+        System.out.println("anclaje:" + getNumeroAnclajes());
+    }
 
+    public void anclajesLibres(){
+
+    }
 
 
 
