@@ -105,7 +105,8 @@ public class MainBD {
 
 
         String queryUpdate = "INSERT INTO empresa.empleados (nombre, apellido, DNI, telefono, Nomina_idNomina)"
-                + " VALUES ('" + Nombre + "'" + "'" + Apellido + "'" + DNI + Telefono + Nomina + "');";
+                + " VALUES ('" + Nombre + "'," + "'" + Apellido + "'," + DNI + "," + Telefono + "," + Nomina + ")";
+        System.out.println(queryUpdate);
         int resultInt = dbConnection.executeUpdate(queryUpdate);
 
         if (resultInt != -1) {
