@@ -7,8 +7,6 @@ import java.sql.ResultSet;
 import java.util.Scanner;
 
 
-
-//Conexion a Base de Datos
 public class MainBD {
 
     private static Scanner keyboard = new Scanner(System.in);
@@ -94,7 +92,7 @@ public class MainBD {
         return resultInt != -1;
     }
 
-    private static boolean crearNuevoEmpleado() {
+    private static boolean crearNuevoEmpleado() throws SQLException {
 
         System.out.println("Nombre: " + "\n" + "Apellido: " + "\n" + "DNI: " + "\n" + "Telefono: " + "\n" + "ID Nomina: ");
         String Nombre = keyboard.nextLine();

@@ -2,7 +2,7 @@ package org.mvpigs.MySQL;
 
 import java.sql.*;
 
-
+// Conexión a la base de datos y consultas e inserción.
 public class dbConnection {
     private static String url = "jdbc:mysql://localhost:3306/empresa";
     private static String user = "root";
