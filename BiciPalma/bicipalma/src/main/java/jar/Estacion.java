@@ -1,27 +1,34 @@
 package jar;
 
-public class Estacion{
-    private int id = 0;
-    private String direccion = null;
-    private int numeroAnclajes = 0;
+import jar.Bicicleta;
+import jar.TarjetaUsuario;
+
+public class Estacion {
+
+    private int id;
+    private String direccion;
+    private int numeroAnclajes;
+    private Bicicleta[] anclajes = null;
+
 
     /* Constructores */
-    public Estacion(int id, String direccion, int anclajes){
+    public Estacion(int id, String direccion, int anclajes) {
         this.id = id;
         this.direccion = direccion;
         this.numeroAnclajes = anclajes;
+        this.anclajes = new Bicicleta[anclajes];
     }
 
     /* Encapsulacion */
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public String getDireccion(){
+    public String getDireccion() {
         return direccion;
     }
 
-    public int getNumeroAnclajes(){
+    public int getNumeroAnclajes() {
         return numeroAnclajes;
     }
 
@@ -32,9 +39,30 @@ public class Estacion{
         System.out.println("anclaje:" + getNumeroAnclajes());
     }
 
-    public void anclajesLibres(){
-
+    public int anclajesLibres() {
+        int anclajLibres = 0;
+        for ( Bicicleta anclaje: this.anclajes ){
+            if (anclaje == null) {
+                anclajLibres++;
+            }
+        }
+        return anclajLibres;
     }
+
+//    public String consultarAnclajes() {
+//
+//        for (Bicicleta anclaje: this.anclajes){
+//            if (anclaje == null){
+//                return "Está libre";
+//            }else{
+//
+//            }
+//            System.out.println(this.getId());
+//
+//        }
+//        return "holi";
+//    }
+
 
 
 
