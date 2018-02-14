@@ -2,6 +2,8 @@ package jar;
 
 import jar.Bicicleta;
 import jar.TarjetaUsuario;
+import jdk.nashorn.internal.runtime.BitVector;
+
 
 public class Estacion {
 
@@ -49,21 +51,42 @@ public class Estacion {
         return anclajLibres;
     }
 
-//    public String consultarAnclajes() {
-//
-//        for (Bicicleta anclaje: this.anclajes){
-//            if (anclaje == null){
-//                return "Está libre";
-//            }else{
-//
-//            }
-//            System.out.println(this.getId());
-//
-//        }
-//        return "holi";
-//    }
+    public void consultarAnclajes() {
 
+        for (Bicicleta anclaje: this.anclajes){
+            if (anclaje == null){
+                System.out.println("FREE!");
+            }else {
+                System.out.println(anclaje.getId());
+            }
+        }
+    }
 
+    public void anclarBicicleta(Bicicleta bicicleta){
+        int posicion = 0;
+        boolean anclajeLibre = true;
+        while(posicion<numeroAnclajes && anclajeLibre){
+            if(anclajes[posicion] == null){
+                anclajes[posicion] = bicicleta;
+                anclajeLibre = false;
+                mostrarAnclaje(bicicleta, posicion);
+            }else{
+                posicion++;
+            }
+        }
+    }
 
+    private void mostrarAnclaje(Bicicleta bicicleta, int posicion) {
+        System.out.println("Bicicleta nº " + bicicleta.getId() + " anclada en anclaje " + posicion);
+    }
+
+    public boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario){
+        return tarjetaUsuario.getActivada();
+    }
+
+    public void mostrarBicicleta(Bicicleta bicicleta, int posicion){
+        System.out.println("La bicicleta con ID " + bicicleta.getId() + " estaba en el anclaje " + posicion);
+
+    }
 
 }

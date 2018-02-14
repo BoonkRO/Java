@@ -1,29 +1,22 @@
 package jar;
 
 public class TarjetaUsuario {
-    private int id;
+    private String id;
     private boolean activada;
 
     /* Constructores */
 
-    public TarjetaUsuario(int id, boolean activada){
+    public TarjetaUsuario(String id, boolean activada){
         this.id = id;
         this.activada = activada;
     }
 
     /* Encapsulacion */
-
-    public int getId(){
-        return id;
+    public boolean getActivada(){
+        return this.activada;
     }
 
-    public void setId(int id){
-        String stringID = Integer.toString(id);
+    public void setActivada(boolean activada){
+        this.activada = activada;
     }
-
-    public String getStringID(String stringID){
-        return stringID;
-    }
-
-
 }
