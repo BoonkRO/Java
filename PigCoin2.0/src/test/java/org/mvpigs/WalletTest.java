@@ -1,13 +1,18 @@
 package org.mvpigs;
 
 import org.junit.Test;
+import org.junit.Before;
+
 import static org.junit.Assert.assertEquals;
-import
+import org.mvpigs.*;
+import java.security.KeyPair;
+import java.util.ArrayList;
+
 
 public class WalletTest {
 
-    public Wallet wallet1 = new Wallet();
-    public Wallet wallet2 = new Wallet();
+    public Wallet cartera1 = new Wallet();
+    public Wallet cartera2 = new Wallet();
     public Wallet origin = new Wallet();
     public BlockChain bChain = new BlockChain();
     public ArrayList<Transaction> blockchain = new ArrayList<Transaction>();
@@ -15,10 +20,10 @@ public class WalletTest {
 
     @Before
     public void testCrearWallets() {
-        wallet1 = new Wallet();
-        wallet1.generateKeyPair();
-        wallet2 = new Wallet();
-        wallet2.generateKeyPair();
+        cartera1 = new Wallet();
+        cartera1.generateKeyPair();
+        cartera2 = new Wallet();
+        cartera2.generateKeyPair();
         origin = new Wallet();
         origin.generateKeyPair();
     }
@@ -43,14 +48,14 @@ public class WalletTest {
     @Test
     public void verWallets() {
 
-        assertEquals(wallet1.toString(), "\nWallet = " + wallet1.getAddress().hashCode() +
-                "\nTotal input = " + wallet1.getTotal_input() +
-                "\nTotal output = " + wallet1.getTotal_output() +
-                "\nBalance = " + wallet1.getBalance() + "\n");
+        assertEquals(cartera1.toString(), "\nWallet = " + cartera1.getAddress().hashCode() +
+                "\nTotal input = " + cartera1.getTotal_input() +
+                "\nTotal output = " + cartera1.getTotal_output() +
+                "\nBalance = " + cartera1.getBalance() + "\n");
 
-        assertEquals(wallet2.toString(), "\nWallet = " + wallet2.getAddress().hashCode() +
-                "\nTotal input = " + wallet2.getTotal_input() +
-                "\nTotal output = " + wallet2.getTotal_output() +
-                "\nBalance = " + wallet2.getBalance() + "\n");
+        assertEquals(cartera2.toString(), "\nWallet = " + cartera2.getAddress().hashCode() +
+                "\nTotal input = " + cartera2.getTotal_input() +
+                "\nTotal output = " + cartera2.getTotal_output() +
+                "\nBalance = " + cartera2.getBalance() + "\n");
     }
 }
