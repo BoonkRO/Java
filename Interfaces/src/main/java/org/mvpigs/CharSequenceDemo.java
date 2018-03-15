@@ -4,11 +4,9 @@ public class CharSequenceDemo implements CharSequence {
     private String s;
 
     public CharSequenceDemo(String s) {
-        //It would be much more efficient to just reverse the string
-        //in the constructor. But a lot less fun!
         this.s = s;
     }
-    
+
     private int fromEnd(int i) {
         return s.length() - 1 - i;
     }
