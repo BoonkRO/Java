@@ -1,4 +1,4 @@
-package org.mvpigs;
+package org.mvpigs.types;
 
 public enum RegulatorDisplayCodes {
 

@@ -1,12 +1,12 @@
-package org.mvpigs;
+package org.mvpigs.main;
 
-import org.mvpigs.GasHeater;
-import org.mvpigs.Regulator;
-import org.mvpigs.RemoteCommandSensor;
-import org.mvpigs.Heater;
-import org.mvpigs.Thermometer;
-import org.mvpigs.Jedi;
-import org.mvpigs.RoomTemperature;
+import org.mvpigs.otherstuff.Jedi;
+import org.mvpigs.types.RoomTemperature;
+import org.mvpigs.hardware.GasHeater;
+import org.mvpigs.hardware.Regulator;
+import org.mvpigs.hardware.RemoteCommandSensor;
+import org.mvpigs.interfaces.Heater;
+import org.mvpigs.interfaces.Thermometer;
 
 public class App
 {

@@ -1,4 +1,4 @@
-package org.mvpigs;
+package org.mvpigs.types;
 
 public class RoomTemperature {
     private double temperature = 0;

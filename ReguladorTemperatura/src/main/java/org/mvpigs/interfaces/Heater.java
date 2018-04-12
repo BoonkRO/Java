@@ -1,8 +1,8 @@
-package org.mvpigs;
+package org.mvpigs.interfaces;
 
-import org.mvpigs.RoomTemperature;
+import org.mvpigs.types.RoomTemperature;
 
-interface Heater {
+public interface Heater {
 
     public void engage(RoomTemperature temperature);
     public void disengage(RoomTemperature temperature);

@@ -1,8 +1,8 @@
-package org.mvpigs;
+package org.mvpigs.otherstuff;
 
-import org.mvpigs.GasHeater;
-import org.mvpigs.Heater;
-import org.mvpigs.RoomTemperature;
+import org.mvpigs.types.RoomTemperature;
+import org.mvpigs.hardware.GasHeater;
+import org.mvpigs.interfaces.Heater;
 
 public class Jedi implements Heater {
 

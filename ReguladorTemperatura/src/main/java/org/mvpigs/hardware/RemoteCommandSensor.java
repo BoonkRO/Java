@@ -1,7 +1,7 @@
-package org.mvpigs;
+package org.mvpigs.hardware;
 
-import org.mvpigs.Thermometer;
-import org.mvpigs.RoomTemperature;
+import org.mvpigs.interfaces.Thermometer;
+import org.mvpigs.types.RoomTemperature;
 
 public class RemoteCommandSensor implements Thermometer {
 

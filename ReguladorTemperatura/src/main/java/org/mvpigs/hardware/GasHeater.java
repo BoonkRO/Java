@@ -1,7 +1,7 @@
-package org.mvpigs;
+package org.mvpigs.hardware;
 
-import org.mvpigs.Heater;
-import org.mvpigs.RoomTemperature;
+import org.mvpigs.interfaces.Heater;
+import org.mvpigs.types.RoomTemperature;
 
 public class GasHeater implements Heater {
 

@@ -1,11 +1,14 @@
-package org.mvpigs;
+package org.mvpigs.hardware;
 
-import org.mvpigs.Heater;
-import org.mvpigs.Thermometer;
-import org.mvpigs.RegulatorDisplayCodes;
-import org.mvpigs.RoomTemperature;
+import org.mvpigs.interfaces.Heater;
+import org.mvpigs.interfaces.Regulate;
+import org.mvpigs.interfaces.Thermometer;
+import org.mvpigs.types.RegulatorDisplayCodes;
+import org.mvpigs.types.RoomTemperature;
 
-public class Regulator implements Regulate{
+
+public class Regulator implements Regulate {
+
     public void regulate(Thermometer t, Heater h, double minTemp, double maxTemp, RoomTemperature temperature) {
         RegulatorDisplayCodes code;
         while (t.read(temperature) < maxTemp) {
