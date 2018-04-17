@@ -9,21 +9,36 @@ import org.mvpigs.types.RoomTemperature;
 
 public class Regulator implements Regulate {
 
-    public void regulate(Thermometer t, Heater h, double minTemp, double maxTemp, RoomTemperature temperature) {
+    private Thermometer t;
+    private Heater h;
+    private double minTemp;
+    private double maxTemp;
+    private RoomTemperature temperature;
+    RegulatorDisplayCodes code;
+
+    public Regulator(Thermometer t, Heater h, double minTemp, double maxTemp, RoomTemperature temperature){
+        this.t = t;
+        this.h = h;
+        this.minTemp = minTemp;
+        this.maxTemp = maxTemp;
+        this.temperature = temperature;
+    }
+
+    public void regulate() {
         RegulatorDisplayCodes code;
         while (t.read(temperature) < maxTemp) {
-            code = RegulatorDisplayCodes.HEATING;
+            this.code = RegulatorDisplayCodes.HEATING;
             h.engage(temperature);
-            message(code, temperature);
+            message();
         }
         while (t.read(temperature) > minTemp) {
-            code = RegulatorDisplayCodes.WAITING;
+            this.code = RegulatorDisplayCodes.WAITING;
             h.disengage(temperature);
-            message(code, temperature);
+            message();
         }
     }
 
-    public void message(RegulatorDisplayCodes code, RoomTemperature temperature) {
+    public void message() {
         switch (code) {
             case HEATING:
                 System.out.println("Calentando => temperatura " + temperature.getTemperature());
