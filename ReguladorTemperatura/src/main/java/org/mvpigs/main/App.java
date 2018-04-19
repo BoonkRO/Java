@@ -15,18 +15,18 @@ public class App
         final double minTemp = 15.0;
         final double maxTemp = 21.0;
 
-        RoomTemperature temperature = new RoomTemperature(15);
+        //RoomTemperature temperature = new RoomTemperature(15);
         Heater heater = new GasHeater();
         Thermometer thermometer = new RemoteCommandSensor();
 
-        Regulator regulator = new Regulator();
+        Regulator regulator = new Regulator(thermometer, heater, minTemp, maxTemp, RoomTemperature.getInstance());
 
         System.out.println( "Arrancando..." );
-        regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
+        regulator.regulate();
 
         Jedi yoda = new Jedi();
         System.out.println( "\nArrancando a Yoda: " );
-        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperature);
+        regulator.regulate();
         yoda.speak();
     }
 }

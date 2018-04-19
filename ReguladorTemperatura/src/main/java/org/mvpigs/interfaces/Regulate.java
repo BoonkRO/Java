@@ -5,7 +5,7 @@ import org.mvpigs.types.RoomTemperature;
 import org.mvpigs.interfaces.Thermometer;
 
 public interface Regulate {
-    public void regulate(Thermometer t, Heater h, double minTemp, double maxTemp, RoomTemperature temperature);
-    public void message(RegulatorDisplayCodes code, RoomTemperature temperature);
+    public void regulate();
+    public void message();
 
 }
