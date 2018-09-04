@@ -42,7 +42,7 @@ public class TestPedidos {
 		TratamientoPedido tratamientoKO = new TratamientoPedidoInternacional(
                                                     (PedidoInternacional) pedidoInt);
         assertNotNull(tratamientoKO);
-        assertFalse(tratamientoKO.tratar());			
+        assertFalse(tratamientoKO.tratar());
 	}
 
 	@Test
